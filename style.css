@@ -1,0 +1,421 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Lato:ital,wght@1,300&family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variables */
+:root{
+    --themecolor: #00A7BE;
+    --dark: #303050;
+    --c-body: #2e2e3f;
+    --rgb: 248,54,145;
+    --main: "Bai Jamjuree", sans-serif;
+    --transition: all .6s cubic-bezier(.165, .84, .44, 1);
+    --shadow: 0px 15px 40px rgba(0 0 0 0.1);
+}
+
+/* Reset and Helpers */
+body{
+    font-family: var(--main);
+    color: var(--c-body);
+    line-height: 1.7;
+}
+
+h1, .h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
+    font-weight: 700;
+    color: var(--dark);
+}
+
+a{
+    text-decoration: none;
+    color: var(--dark);
+    transition: var(--transition);
+}
+
+a:hover{
+    color: var(--themecolor);
+}
+
+img{
+    width: 100%;
+}
+
+.section-padding{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.text-brand{
+    color: var(--themecolor);
+}
+
+.section-title{
+    max-width: 560px;
+    margin: 0 auto 60px auto;
+}
+
+.section-title .line{
+    width: 60px;
+    height: 2px;
+    background-color: var(--themecolor);
+    display: inline-block;
+}
+
+.section-connector{
+    position: relative;
+}
+
+.section-connector::after{
+    content: '';
+    width: 2px;
+    height: 120px;
+    background-color: var(--themecolor);
+    position: absolute;
+    top: -60px;
+    left: 50%;
+}
+
+/* ---- Navbar Section Start ---- */
+
+.navbar{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color:  white;
+    box-shadow: var(--shadow);
+}
+
+.navbar .navbar-nav .nav-link{
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active{
+    color: var(--themecolor);
+}
+
+.navbar-brand{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.social-icon{
+    width: 36px;
+    height: 36px;
+    background-color: var(--themecolor);
+    color: white;
+    border: 2px solid var(--themecolor);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+}
+
+.social-icon:hover{
+    background-color: transparent;
+}
+
+
+/* ---- Navbar Section End ---- */
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+
+/* ---- Button Section Starts ---- */
+
+.btn{
+    padding: 10px 24px;
+    border-radius: 0;
+    border-width: 2px;
+    font-weight: 500;
+}
+
+.btn-brand,
+.btn-brand:focus{
+    background-color: var(--themecolor);
+    color: white;
+    border-color: var(--themecolor);
+}
+
+.btn-brand:hover{
+    background-color: transparent;
+    color: var(--themecolor);
+    border-color: var(--themecolor);
+}
+
+/* ---- Button Section Ends ---- */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ---- Home Section Starts ---- */
+
+#home{
+    background-image: url(wallpaper.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* ---- Home Section Ends */
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -- Service Section Starts */
+
+.service-icon{
+    width: 60px;
+    height: 60px;
+    background-color: var(--themecolor);
+    color: white;
+    font-size: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-link{
+    display: inline-flex;
+    align-items: center;
+}
+
+.custom-link span{
+    font-weight: 700;
+}
+
+.custom-link i{
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--themecolor);
+    border-radius: 100px;
+    color: white;
+    margin-left: 6px;
+    transition: var(--transition);
+}
+
+.custom-link:hover i{
+    transform: translateX(8px);
+}
+
+/* -- Service Section Ends */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Resume Section Starts */
+
+.edu{
+    position: relative;
+}
+
+.edu::before{
+    content: '';
+    height: 100%;
+    width: 1px;
+    background-color: var(--themecolor);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.edu::after{
+    content: '';
+    height: 14px;
+    width: 14px;
+    background-color: var(--themecolor);
+    position: absolute;
+    left: -7px;
+    top: 0;
+}
+
+/* Resume Section Ends */
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+/* Blog Section Starts */
+
+.image-zoom{
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.image-zoom-wrapper{
+    overflow:hidden;
+    position: relative;
+}
+
+.image-zoom-wrapper img{
+    transition: var(--transition);
+}
+
+.image-zoom:hover .image-zoom-wrapper img{
+    transform: scale(1.5);
+    filter: saturate(1);
+}
+
+/* Blog Section Ends */
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+
+/* Contact Section Starts */
+
+#contact{
+    padding: 70px 30px;
+    background-color:white;
+}
+
+#contact .contact-row{
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+#contact .contact-row .contact-left{
+    flex-basis: 40%;
+    min-width: 40%;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,20%);
+    border-radius: 4px;
+    padding: 30px;
+}
+
+#contact .contact-row .contact-left .icon-box{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin: 30px 0;
+}
+
+#contact .contact-row .contact-left .icon-box .icon i{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--themecolor);
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    color: var(--themecolor);
+    transition: 0.5s;
+}
+
+#contact .contact-row .contact-left .icon-box:hover .icon i{
+    background-color: var(--themecolor);
+    color: var(--bgcolor);
+}
+
+#contact .contact-row .contact-left .icon-box .info h4{
+    font-size: 20px;
+    color: var(--sidebgcolor);
+    font-weight: 600;
+}
+
+#contact .contact-row .contact-left .icon-box .info h4+p{
+    color: var(--texxtcolor);
+    font-size: 15px;
+    font-weight: 450;
+}
+
+#contact .contact-row .contact-right{
+    flex-basis: 60%;
+    min-width: 60%;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,20%);
+    border-radius: 4px;
+    padding: 30px;
+}
+
+#contact .contact-row .contact-right form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+#contact .contact-row .contact-right form input,
+#contact .contact-row .contact-right form textarea{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--texxtcolor);
+    padding: 10px 20px;
+    border: 2px solid lightgray;
+    border-radius: 2px;
+    outline: none;
+    resize: none;
+    transition: 0.5s;
+}
+
+#contact .contact-row .contact-right form input:focus,
+#contact .contact-row .contact-right form textarea:focus{
+    border: 2px solid var(--themecolor);
+}
+
+#contact .contact-row .contact-right form input[type=submit]{
+    background-color: var(--themecolor);
+    color: var(--bgcolor);
+    border: 2px solid var(--themecolor);
+    font-size: 17px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* Contact Section Ends */
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+/* Footer Section Starts */
+
+footer{
+    padding-top: 120px;
+}
+
+.footer-top{
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.644);
+}
+
+.footer-bottom{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+footer li,
+footer p,
+footer a{
+    color: rgba(255,255,255,0.7);
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+footer .line{
+    width: 45px;
+    height: 4px;
+    background-color: var(--themecolor);
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.social-icons a{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 100px;
+}
+
+.social-icons a:hover{
+    background-color: var(--themecolor);
+    color: white;
+}
+
+/* ---- Footer Section Ends ---- */
